@@ -1,0 +1,70 @@
+.side-bar-bg {
+    background: var(--secondary-color);
+    height: 100vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-logocontainer
+{
+    height: 10vh;
+    width: 100%;
+}
+
+.sidebar-logo
+{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    color: #DED8D9;
+    padding: 15px 0 0 15px;
+
+}
+
+.sidebar-mainimage
+{
+    height: 60vh;
+    width: 100%;
+}
+
+.sidebar-mainimage > img
+{
+    height: 60vh;
+    width: 100%;
+}
+
+.sidebar-description
+{
+    height: 30vh;
+    width: 100%;
+    padding-top: 30px;
+}
+
+.sidebar-description > h2
+{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: left;
+    color: #DED8D9;
+    padding: 15px 15px 5px 15px;
+}
+
+.sidebar-description > p
+{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #DED8D9;
+    text-align: justify;
+    padding: 5px 35px 15px 15px;
+}

@@ -1,0 +1,10 @@
+::ng-deep * {
+    margin: 0;
+    padding: 0;
+
+    --Font: 'Poppins', sans-serif;
+    
+    --primary-color: #202020;
+    --secondary-color: #D9425B;
+    --highlighted-color: #C92320;
+}
