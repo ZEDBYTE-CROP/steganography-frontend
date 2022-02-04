@@ -7,13 +7,18 @@ import { AppComponent } from './app.component';
 
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { CreateComponent } from './pages/create/create.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     RoutingComponent,
-    SidebarComponent
+    SidebarComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FundTransferComponent } from './fund-transfer.component';
+import { CreateSteganoComponent } from './create-stegano.component';
 
-describe('FundTransferComponent', () => {
-  let component: FundTransferComponent;
-  let fixture: ComponentFixture<FundTransferComponent>;
+describe('CreateSteganoComponent', () => {
+  let component: CreateSteganoComponent;
+  let fixture: ComponentFixture<CreateSteganoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FundTransferComponent ]
+      declarations: [ CreateSteganoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FundTransferComponent);
+    fixture = TestBed.createComponent(CreateSteganoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

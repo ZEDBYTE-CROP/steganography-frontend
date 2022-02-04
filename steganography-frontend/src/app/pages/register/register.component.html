@@ -7,60 +7,60 @@
         <form [formGroup]="register_form" class="register-form-container">
           <input
             type="text"
-            formControlName="First_Name"
+            formControlName="name"
             class="form__field"
             placeholder="Enter Name"
           />
           <small
             class="error"
             *ngIf="
-              register_form.get('First_Name')!.invalid &&
-              register_form.get('First_Name')!.touched
+              register_form.get('name')!.invalid &&
+              register_form.get('name')!.touched
             "
             >Required Name</small
           >
 
           <input
             type="text"
-            formControlName="Last_Name"
+            formControlName="phone"
             class="form__field"
             placeholder="Enter Phone Number"
           />
           <small
             class="error"
             *ngIf="
-              register_form.get('Last_Name')!.invalid &&
-              register_form.get('Last_Name')!.touched
+              register_form.get('phone')!.invalid &&
+              register_form.get('phone')!.touched
             "
             >Required Phone Number</small
           >
 
           <input
             type="text"
-            formControlName="Account_Number"
+            formControlName="userid"
             class="form__field"
             placeholder="Enter Userid"
           />
           <small
             class="error"
             *ngIf="
-              register_form.get('Account_Number')!.invalid &&
-              register_form.get('Account_Number')!.touched
+              register_form.get('userid')!.invalid &&
+              register_form.get('userid')!.touched
             "
             >Required Userid</small
           >
 
           <input
             type="text"
-            formControlName="Aadhar_Number"
+            formControlName="password"
             class="form__field"
             placeholder="Enter Password"
           />
           <small
             class="error"
             *ngIf="
-              register_form.get('Aadhar_Number')!.invalid &&
-              register_form.get('Aadhar_Number')!.touched
+              register_form.get('password')!.invalid &&
+              register_form.get('password')!.touched
             "
             >Required Password</small
           >

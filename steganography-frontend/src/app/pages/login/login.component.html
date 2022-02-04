@@ -7,32 +7,32 @@
         <form [formGroup]="login_form" class="login-form-container">
           <input
             type="text"
-            formControlName="Account_number"
+            formControlName="userid"
             class="form__field"
-            placeholder="Enter Userid"
+            placeholder="Enter userid"
           />
           <small
             class="error"
             *ngIf="
-              login_form.get('Account_number')!.invalid &&
-              login_form.get('Account_number')!.touched
+              login_form.get('userid')!.invalid &&
+              login_form.get('userid')!.touched
             "
-            >Required Account Number</small
+            >Required userid</small
           >
 
           <input
             type="text"
-            formControlName="Password"
+            formControlName="password"
             class="form__field"
-            placeholder="Enter Password"
+            placeholder="Enter password"
           />
           <small
             class="error"
             *ngIf="
-              login_form.get('Password')!.invalid &&
-              login_form.get('Password')!.touched
+              login_form.get('password')!.invalid &&
+              login_form.get('password')!.touched
             "
-            >Required Password</small
+            >Required password</small
           >
 
           <button

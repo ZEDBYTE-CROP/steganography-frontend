@@ -1,7 +1,18 @@
 <section class="home-main-container">
-    <app-sidebar></app-sidebar>
+  <app-sidebar></app-sidebar>
+  <div class="home-right-container">
+    <h1>WELCOME USER : {{ user_id }}</h1>
     <div class="home-container">
-        <div class="home-box1"></div>
-        <div class="home-box2"></div>
+      <div class="home-box1">
+        <img src="/assets/create-stegano-01.svg" alt="" />
+        <button (click)="route_to_create()" class="button">
+          CREATE STEGANOGRAPHY
+        </button>
+      </div>
+      <div class="home-box2">
+        <img src="/assets/share-01.svg" alt="" />
+        <button (click)="route_to_share()" class="button">SHARED FILES</button>
+      </div>
     </div>
+  </div>
 </section>

@@ -3,15 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
-import { FundTransferComponent } from './pages/fund-transfer/fund-transfer.component';
-import { DepositCalculatorComponent } from './pages/deposit-calculator/deposit-calculator.component';
+import { CreateSteganoComponent } from './pages/create-stegano/create-stegano.component';
+import { SharedFilesComponent } from './pages/shared-files/shared-files.component';
+import { DecryptComponent } from './pages/decrypt/decrypt.component';
 
 const routes: Routes = [
   {path:"",component:LoginComponent},
   {path:"register",component:RegisterComponent},
   {path:"home",component:HomeComponent},
-  {path:"fund-transfer",component:FundTransferComponent},
-  {path:"deposit",component:DepositCalculatorComponent},
+  {path:"create-stegano",component:CreateSteganoComponent},
+  {path:"shared-files",component:SharedFilesComponent},
+  {path:"decrypt",component:DecryptComponent}
 ];
 
 @NgModule({
@@ -23,6 +25,7 @@ export const RoutingComponent = [
   LoginComponent,
   RegisterComponent,
   HomeComponent,
-  FundTransferComponent,
-  DepositCalculatorComponent
+  CreateSteganoComponent,
+  SharedFilesComponent,
+  DecryptComponent
 ];

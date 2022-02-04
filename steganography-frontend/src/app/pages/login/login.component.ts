@@ -3,11 +3,9 @@ import { Router } from '@angular/router';
 import { NetworkCallsService } from '../../services/network-calls.service';
 import {
   FormGroup,
-  FormArray,
   FormBuilder,
   Validators,
-  FormControl,
-  AbstractControl,
+  FormControl
 } from '@angular/forms';
 
 @Component({
@@ -27,8 +25,8 @@ export class LoginComponent implements OnInit {
   public login_form: FormGroup;
   submitError: boolean = false;
   formcontrol: any;
-  Acc_number: number;
-  Pass: string;
+  userid: string;
+  password: string;
   result: any;
 
   // functions
@@ -39,11 +37,11 @@ export class LoginComponent implements OnInit {
       this.submitError = false;
       console.log(this.login_form);
 
-      this.Acc_number = this.login_form.get('Account_number')!.value;
-      this.Pass = this.login_form.get('Password')!.value;
-      console.log('params =>', this.Acc_number, this.Pass);
+      this.userid = this.login_form.get('userid')!.value;
+      this.password = this.login_form.get('password')!.value;
+      console.log('params =>', this.userid, this.password);
 
-      this.networkcall.callLoginApi(this.Acc_number, this.Pass);
+      this.networkcall.callLoginApi(this.userid, this.password);
     } else {
       this.submitError = true;
     }
@@ -57,8 +55,8 @@ export class LoginComponent implements OnInit {
     // form starts here
 
     this.login_form = this.fb.group({
-      Account_number: new FormControl('', [Validators.required]),
-      Password: new FormControl('', [Validators.required]),
+      userid: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required]),
     });
   }
 }

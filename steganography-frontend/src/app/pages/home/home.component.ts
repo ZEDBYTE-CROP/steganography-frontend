@@ -13,30 +13,26 @@ export class HomeComponent implements OnInit {
     private networkcall: NetworkCallsService) { }
 
     public balance:number
+    public user_id:string
 
     // functions
 
-    route_to_fund() {
-      this.router.navigate(['fund-transfer']);
+    route_to_create() {
+      this.router.navigate(['create-stegano']);
     }
 
-    route_to_deposy() {
-      this.router.navigate(['deposit']);
+    route_to_share() {
+      this.router.navigate(['shared-files']);
     }
 
-    check_balance() {
-      window.location.reload()
-      this.balance = parseInt(sessionStorage.getItem("balance")!)
-    }
-
-     
+    
 
   ngOnInit(): void {
-    // if(sessionStorage.getItem("login") === "1"){
-    //   this.networkcall.callDetailsApi(parseInt(sessionStorage.getItem("Account_number")!));
-    // }
-    // else{
-    //   this.router.navigate(['']);
-    // }
+    if(sessionStorage.getItem("login") === "1"){
+      this.user_id = sessionStorage.getItem("userid");
+    }
+    else{
+      this.router.navigate(['']);
+    }
   }
 }
