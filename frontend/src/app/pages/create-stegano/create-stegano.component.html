@@ -1,0 +1,120 @@
+<section class="create-main-container">
+  <app-sidebar></app-sidebar>
+  <div class="create-container">
+    <h1 class="create-heading">CREATE NEW STEGANOGRAPHY</h1>
+    <div class="create-secret-container">
+      <form [formGroup]="plaintext_form" class="create-secret-container">
+        <input
+          type="text"
+          formControlName="original_text"
+          class="form__field"
+          placeholder="Enter secret message"
+        />
+        <small
+          class="error"
+          *ngIf="
+            plaintext_form.get('original_text')!.invalid &&
+            plaintext_form.get('original_text')!.touched
+          "
+          >Required secret message</small
+        >
+
+        <button
+          type="submit"
+          class="submit-button"
+          [formGroup]="plaintext_form"
+          (click)="textEncrypt()"
+        >
+          Encrypt Text
+        </button>
+        <div *ngIf="submitError" class="error">
+          Please fill all the required fields
+        </div>
+      </form>
+    </div>
+    <div class="create-heading">Encrypted text : {{ encrypt }}</div>
+    <div class="stegano-container">
+      <div class="upload_image">
+        <div>
+          <button
+            class="submit-button"
+            onclick="document.getElementById('files').click()"
+          >
+            Upload image
+          </button>
+          <input
+            id="files"
+            type="file"
+            style="display: none"
+            (change)="selectFile($event)"
+          />
+        </div>
+
+        <div class="image_preview">
+          <img [src]="original_preview" height="auto" width="200" alt="" />
+        </div>
+      </div>
+
+      <!-- create steganography -->
+      <div class="upload_image">
+        <div>
+          <button
+            (click) = "imageEncrypt()"
+            class="submit-button"
+          >
+            create stegano
+          </button>
+        </div>
+
+        <div class="image_preview">
+          <img [src]="steganoFile" height="auto" width="200" alt="" />
+        </div>
+      </div>
+
+      <!-- generate qr code -->
+      <div class="upload_image">
+        <div>
+          <button
+            class="submit-button"
+            (click)="generateQR()"
+          >
+            generate QR
+          </button>
+        </div>
+        <div class="image_preview">
+          <img [src]="qrcode" height="auto" width="200" alt="" />
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="share_container">
+      <form [formGroup]="share_form" class="create-secret-container">
+        <input
+          type="text"
+          formControlName="peeruserid"
+          class="form__field"
+          placeholder="Enter userId"
+        />
+        <small
+          class="error"
+          *ngIf="
+          share_form.get('peeruserid')!.invalid &&
+          share_form.get('peeruserid')!.touched
+          "
+          >Required user id</small
+        >
+
+        <button
+          type="submit"
+          class="submit-button"
+          [formGroup]="share_form"
+          (click)="share()"
+        >
+          Share
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

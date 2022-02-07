@@ -1,0 +1,59 @@
+<section class="login-bg-conyainer">
+  <app-sidebar></app-sidebar>
+  <div class="login-main-container">
+    <div class="login-container">
+      <h1 class="login-heading">LOGIN</h1>
+      <div class="login-form-container">
+        <form [formGroup]="login_form" class="login-form-container">
+          <input
+            type="text"
+            formControlName="userid"
+            class="form__field"
+            placeholder="Enter userid"
+          />
+          <small
+            class="error"
+            *ngIf="
+              login_form.get('userid')!.invalid &&
+              login_form.get('userid')!.touched
+            "
+            >Required userid</small
+          >
+
+          <input
+            type="text"
+            formControlName="password"
+            class="form__field"
+            placeholder="Enter password"
+          />
+          <small
+            class="error"
+            *ngIf="
+              login_form.get('password')!.invalid &&
+              login_form.get('password')!.touched
+            "
+            >Required password</small
+          >
+
+          <button
+            type="submit"
+            class="submit-button"
+            [formGroup]="login_form"
+            (click)="onSubmit()"
+          >
+            LOGIN
+          </button>
+          <div *ngIf="submitError" class="error">
+            Please fill all the required fields
+          </div>
+          <p class="register-para">
+            If you are a new user please
+            <a class="highlight-register" (click)="route_to_register()"
+              >register here</a
+            >
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

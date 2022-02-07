@@ -1,0 +1,27 @@
+<section class="shared-bg-conyainer">
+  <app-sidebar></app-sidebar>
+  <div class="shared-main-container">
+      <h1 class="shared-heading">shared</h1>
+      <div class="box-container">
+      <div *ngFor="let product of result" class="shared-form-container">
+        <div class="box">
+          <img src="{{ product.qrCode }}" alt="" />
+          <form [formGroup]="verify_form">
+            <input
+              type="text"
+              formControlName="otp"
+              placeholder="Enter OTP"
+            />
+            <button
+              type="submit"
+              [formGroup]="verify_form"
+              (click)="onSubmit()"
+            >
+              VERIFY
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
